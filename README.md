@@ -25,6 +25,7 @@ npm install @nextui-org/react framer-motion --legacy-peer-deps
 
 # Install prisma
 npm i prisma
+npm i @prisma/client@5.22.0 --silent
 
 # Setup prisma with sqlite
 npx prisma init --datasource-provider sqlite

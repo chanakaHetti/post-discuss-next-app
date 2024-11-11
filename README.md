@@ -20,6 +20,9 @@ bun dev
 # Create next app
 npx create-next-app@latest
 
+# Install NextUI and Framer motion
+npm install @nextui-org/react framer-motion --legacy-peer-deps
+
 # Install prisma
 npm i prisma
 

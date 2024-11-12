@@ -32,6 +32,11 @@ npx prisma init --datasource-provider sqlite
 
 # Migration
 npx prisma migrate dev
+
+# Next Auth
+npm install @auth/core @auth/prisma-adapter next-auth@beta --legacy-peer-deps
+npm i --save-exact @auth/core@0.18.1 @auth/prisma-adapter@1.0.6 next-auth@5.0.0-beta.3 --legacy-peer-deps
+
 ```
 
 ### Build production in locally

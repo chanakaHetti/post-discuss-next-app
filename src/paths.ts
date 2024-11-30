@@ -1,4 +1,4 @@
-const pasths = {
+const paths = {
   home() {
     return '/';
   },
@@ -13,4 +13,4 @@ const pasths = {
   },
 };
 
-export default pasths;
+export default paths;

@@ -78,7 +78,7 @@ export async function createTopic(
     };
   }
 
-  // revalidate the homepage
+  // Revalidate the homepage
   revalidatePath('/');
   redirect(paths.topicShow(topic.slug));
 }

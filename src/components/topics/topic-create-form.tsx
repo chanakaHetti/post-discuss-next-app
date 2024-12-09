@@ -1,6 +1,6 @@
 'use client';
 
-import { useActionState, startTransition } from 'react';
+import { useActionState } from 'react';
 import {
   Input,
   Button,
@@ -11,20 +11,23 @@ import {
 } from '@nextui-org/react';
 
 import * as actions from '@/actions';
+import FormButton from '@/components/common/form-button';
 
 export default function TopicCreateForm() {
-  const [formState, action] = useActionState(actions.createTopic, {
+  const [formState, action, isPending] = useActionState(actions.createTopic, {
     errors: {},
   });
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    console.log('event', event);
-    // event.preventDefault();
-    // const formData = new FormData(event.currentTarget);
-    // startTransition(() => {
-    //   action(formData);
-    // });
-  }
+  console.log('isPending', isPending);
+
+  // function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  // console.log('event', event);
+  // event.preventDefault();
+  // const formData = new FormData(event.currentTarget);
+  // startTransition(() => {
+  //   action(formData);
+  // });
+  // }
 
   return (
     <Popover placement="left">
@@ -60,7 +63,8 @@ export default function TopicCreateForm() {
               </div>
             ) : null}
 
-            <Button type="submit">Create</Button>
+            {/* <Button type="submit">Create</Button> */}
+            <FormButton isLoading={isPending}>Create</FormButton>
           </div>
         </form>
       </PopoverContent>
